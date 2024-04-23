@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { GoogleMap, useJsApiLoader, Marker, MarkerClusterer } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 const Map = () => {
     const [latitude, setLatitude] = useState(-1.458558);
@@ -25,7 +25,7 @@ const Map = () => {
         } else {
           console.error('Geolocation is not supported by this browser.');
         }
-      }, [])
+      }, [latitude, longitude])
 
     const position = {
         lat: latitude,
@@ -33,7 +33,7 @@ const Map = () => {
     }
 
     return (
-        <div className='w-screen h-screen'>
+        <div className='w-screen h-screen overflow-hidden'>
             {
                 isLoaded ? (
                     <GoogleMap

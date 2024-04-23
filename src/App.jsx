@@ -1,5 +1,6 @@
 import Map from './components/Map'
 import ReportPopUp from './components/ReportPopUp'
+import ReportsFeed from './components/ReportsFeed'
 
 function App() {
 // GOOGLE MAPS API KEY - AIzaSyDrczC83Gc2EuOJDyCF8nwVwzajUHWt0dc
@@ -8,10 +9,10 @@ function App() {
     <>
       <div className='relative'>
         <Map />
-        <div>
-          <h1 className="absolute mb-4 text-3xl font-bold text-center bg-red-500 top-60">Hello world</h1>
+        <div className='absolute top-0 left-0'>
+          <ReportsFeed />
         </div>
-        <div className='absolute top-3 right-3'>
+        <div className='absolute top-2 right-2'>
           <ReportPopUp />
         </div>
       </div>

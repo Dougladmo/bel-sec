@@ -77,6 +77,9 @@ const Map = () => {
             mapContainerStyle={{ width: '100%', height: '100%' }}
             center={userPosition}
             zoom={16}
+            options={{
+              zoomControl: false
+            }}
           >
             <>
               <Marker position={userPosition} options={{

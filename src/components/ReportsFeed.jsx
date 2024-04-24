@@ -18,7 +18,7 @@ const ReportsFeed = () => {
     ])
 
     return (
-        <div className={`bg-[#1E1E1E] text-white h-screen flex max-w-80 absolute top-0 left-0 md:max-w-xl ${isActive ? 'w-auto animate-offCanvas' : 'w-1'}`}>
+        <div className={`bg-[#1E1E1E] text-white h-screen flex max-w-80 fixed top-0 left-0 md:max-w-xl ${isActive ? 'w-auto animate-offCanvas' : 'w-1'}`}>
             <div className='flex flex-col items-center py-5'>
                 {
                     isActive ?

@@ -74,6 +74,7 @@ const Map = () => {
       {
         isLoaded ? (
           <GoogleMap
+            className='overflow-hidden'
             mapContainerStyle={{ width: '100%', height: '100%' }}
             center={userPosition}
             zoom={16}

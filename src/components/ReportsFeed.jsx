@@ -4,7 +4,7 @@ import IncidentReport from './IncidentReport'
 import img from '../assets/images.jpg'
 
 const ReportsFeed = () => {
-    const [isActive, setIsActive] = useState(true)
+    const [isActive, setIsActive] = useState(false)
 
     const Reports = [
         {

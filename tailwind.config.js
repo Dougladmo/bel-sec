@@ -19,13 +19,13 @@ export default {
     },
     extend: {
       keyframes: {
-        'slideLeft': {
+        'slide': {
           '0%': { transform: 'translate(-400px)'},
           '100%': { transform: 'translate(0px)'},
         }
       },
       animation: {
-        offCanvas: 'slideLeft 1s',
+        offCanvas: 'slide 1s',
       }
     },
   },

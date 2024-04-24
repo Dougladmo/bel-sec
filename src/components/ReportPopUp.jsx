@@ -7,7 +7,7 @@ const ReportPopUp = () => {
     return (
         isActive ? (<div className='text-white flex flex-col bg-[#1E1E1E] pb-4 p-3 rounded-lg absolute top-2 right-2 cursor-pointer'>
             <IoMdClose onClick={() => setIsActive(false)} size={30} className='pr-1 text-white self-end'/>
-            <h2 className='text-2xl border-b-2 border-white'>Incident Reports</h2>
+            <h2 className='text-2xl border-b-2 border-white'>Emergency Telephone</h2>
             <div className='border-b-2 border-white pb-2'>
                 <h3 className='text-lg'>Emergency Numbers:</h3>
                 <p className='text-sm'>Police: 190</p>

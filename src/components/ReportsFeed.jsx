@@ -57,9 +57,15 @@ const ReportsFeed = () => {
                                     }) 
                                     :
                                     (
-                                        <div>
-                                            dicas
-                                        </div>
+                                        <ul className='flex flex-col gap-5 py-5 pl-5 text-lg text-justify list-disc'>
+                                            <li>Keep your documents and money in safe places.</li>
+                                            <li>Avoid leaving belongings, such as backpacks and bags, in areas with little visibility, such as your back</li>
+                                            <li>Know your local emergency numbers.</li>
+                                            <li>Avoid using your cell phone in places with few people around</li>
+                                            <li>Be aware of possible scams and theft.</li>
+                                            <li>Avoid attracting attention with valuable objects.</li>
+                                            <li>Choose safe transportation and avoid sharing personal information.</li>
+                                        </ul>
                                     ) 
                                     } 
                                 </div>

@@ -9,12 +9,10 @@ function App() {
 
   return (
     <>
-      <div className='relative h-screen'>
+      <div className='relative h-screen overflow-hidden'>
         <Map />
-          <Navbar />
           <ReportsFeed />
           <ReportPopUp />
-        <MobileNav />
       </div>
     </>
   )

@@ -33,7 +33,7 @@ const Map = () => {
     }
 
     return (
-        <div className='w-screen h-screen overflow-hidden'>
+        <div className='w-screen h-[91%] md:h-full overflow-hidden'>
             {
                 isLoaded ? (
                     <GoogleMap
@@ -42,12 +42,14 @@ const Map = () => {
                         zoom={18}
                     >
                         { /* Child components, such as markers, info windows, etc. */}
-                        <><Marker position={position} options={{
+                        <>
+                        <Marker position={position} options={{
                             label: {
                                 text: 'Você está aqui!',
                                 className: 'bg-white p-2 border-2 border-black rounded-md mb-16'
                             }
-                        }} /></>
+                        }} />
+                        </>
                     </GoogleMap>
                 ) : <></>
             }

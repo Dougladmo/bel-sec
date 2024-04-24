@@ -1,19 +1,20 @@
 import Map from './components/Map'
+import MobileNav from './components/MobileNav'
+import Navbar from './components/Navbar'
 import ReportPopUp from './components/ReportPopUp'
+import ReportsFeed from './components/ReportsFeed'
 
 function App() {
 // GOOGLE MAPS API KEY - AIzaSyDrczC83Gc2EuOJDyCF8nwVwzajUHWt0dc
 
   return (
     <>
-      <div className='relative'>
+      <div className='relative h-screen overflow-hidden'>
         <Map />
-        <div>
-          <h1 className="absolute mb-4 text-3xl font-bold text-center bg-red-500 top-60">Hello world</h1>
-        </div>
-        <div className='absolute top-3 right-3'>
+          <Navbar />
+          <ReportsFeed />
           <ReportPopUp />
-        </div>
+        <MobileNav />
       </div>
     </>
   )

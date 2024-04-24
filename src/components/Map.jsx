@@ -33,7 +33,7 @@ const Map = () => {
     }
 
     return (
-        <div className='w-screen h-screen overflow-hidden'>
+        <div className='w-screen h-[91%] md:h-full overflow-hidden'>
             {
                 isLoaded ? (
                     <GoogleMap

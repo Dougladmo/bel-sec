@@ -16,13 +16,26 @@ const ReportsFeed = () => {
     ]
 
     return (
-        <div className={`bg-[#1E1E1E] text-white h-screen flex max-w-80 md:max-w-xl ${isActive ? 'w-auto' : 'w-1'}`}>
+        <div className={`bg-[#1E1E1E] text-white h-screen flex max-w-80 absolute top-0 left-0 md:max-w-xl ${isActive ? 'w-auto animate-offCanvas' : 'w-1'}`}>
             <div className='py-5 flex flex-col items-center'>
                 {
                     isActive ?
                         (
-                            <div className='px-5'>
-                                <h2 className='text-4xl text-center border-b-4 border-white pb-2'>Incident Reports</h2>
+                            <div className='pl-5 pr-10 overflow-auto scroll-mx-72'>
+                                <h2 className='text-4xl text-center border-b-4 border-white pb-2 uppercase font-mono'>Incident Reports</h2>
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
+                                <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
                                 <IncidentReport time={Reports[0].time}  description={Reports[0].description} img={Reports[0].img} type={Reports[0].type} />
                             </div>
                         )
@@ -30,12 +43,12 @@ const ReportsFeed = () => {
                         (null)
                 }
             </div>
-            <div onClick={() => {isActive ? setIsActive(false) : setIsActive(true) }} className={`self-center bg-[#1E1E1E] flex items-center relative h-32 rounded-r-lg ${isActive ? 'left-10' : 'left-0'}`}>
+            <div onClick={() => {isActive ? setIsActive(false) : setIsActive(true) }} className={`cursor-pointer self-center bg-[#1E1E1E] flex items-center relative h-32 rounded-r-lg ${isActive ? 'left-8' : '-left-2'}`}>
             {
                     isActive ?
-                        (<IoMdArrowDropleft size={50} className='' />)
+                        (<IoMdArrowDropleft size={50} />)
                         :
-                        (<IoMdArrowDropright size={50} className='' />)
+                        (<IoMdArrowDropright size={50} />)
                 }
             </div>
         </div>

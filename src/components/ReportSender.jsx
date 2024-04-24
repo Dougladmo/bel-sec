@@ -18,7 +18,7 @@ const ReportSender = () => {
         )
         :
         (
-            <div  onClick={() => setIsActive(true)} className='cursor-pointer flex flex-col text-[#1E1E1E] hover:text-yellow-400 transition duration-300 hover:bg-[#1E1E1E] items-center justify-center absolute w-20 h-20 bg-yellow-400 border-4 border-[#1E1E1E] rounded-full right-4 bottom-20'>
+            <div  onClick={() => setIsActive(true)} className='cursor-pointer flex flex-col text-[#1E1E1E] hover:text-yellow-400 transition duration-300 hover:bg-[#1E1E1E] items-center justify-center fixed w-20 h-20 bg-yellow-400 border-4 border-[#1E1E1E] rounded-full right-4 bottom-20'>
                 <FiAlertTriangle size={50} />
             </div>
         )

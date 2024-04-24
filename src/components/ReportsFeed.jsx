@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { IoMdArrowDropright, IoMdArrowDropleft } from 'react-icons/io'
 import IncidentReport from './IncidentReport'
 import img from '../assets/images.jpg'
+import SecTips from '../assets/SecurityTips.png'
 
 const ReportsFeed = () => {
     const [isActive, setIsActive] = useState(false)
@@ -11,30 +12,7 @@ const ReportsFeed = () => {
             type: 'acidente',
             description: 'Um acidente de carro em uma interseção da cidade deixou danos materiais e ferimentos leves nos ocupantes. As autoridades estão investigando.',
             time: '18:45',
-            img: img,
-        },
-        {
-            type: 'acidente',
-            description: 'Um acidente de carro em uma interseção da cidade deixou danos materiais e ferimentos leves nos ocupantes. As autoridades estão investigando.',
-            time: '18:45',
-            img: img,
-        },
-        {
-            type: 'acidente',
-            description: 'Um acidente de carro em uma interseção da cidade deixou danos materiais e ferimentos leves nos ocupantes. As autoridades estão investigando.',
-            time: '18:45',
-            img: img,
-        },
-        {
-            type: 'acidente',
-            description: 'Um acidente de carro em uma interseção da cidade deixou danos materiais e ferimentos leves nos ocupantes. As autoridades estão investigando.',
-            time: '18:45',
-            img: img,
-        },
-        {
-            type: 'acidente',
-            description: 'Um acidente de carro em uma interseção da cidade deixou danos materiais e ferimentos leves nos ocupantes. As autoridades estão investigando.',
-            time: '18:45',
+            local: 'Almirante barroso',
             img: img,
         },
     ])
@@ -51,23 +29,57 @@ const ReportsFeed = () => {
                                     <li onClick={() => setNavigation('Tips')} className='border-b-2 border-white py-2 transition duration-300 px-5 rounded-r-md hover:bg-white hover:text-[#1E1E1E]'>Security Tips</li>
                                 </ul>
                                 <div>
-                                    <h2 className='pb-2 mt-2 font-mono text-4xl text-center uppercase border-b-4 border-white'>{navigation == 'Feed' ? 'Incidents Feed' : 'Security Tips'}</h2>
-                                    {navigation == 'Feed'? Reports.map((Report, index) => {
-                                        return <IncidentReport key={index} time={Report.time} description={Report.description} type={Report.type} img={Report.img} /> 
-                                    }) 
-                                    :
-                                    (
-                                        <ul className='flex flex-col gap-5 py-5 pl-5 text-lg text-justify list-disc'>
-                                            <li>Keep your documents and money in safe places.</li>
-                                            <li>Avoid leaving belongings, such as backpacks and bags, in areas with little visibility, such as your back</li>
-                                            <li>Know your local emergency numbers.</li>
-                                            <li>Avoid using your cell phone in places with few people around</li>
-                                            <li>Be aware of possible scams and theft.</li>
-                                            <li>Avoid attracting attention with valuable objects.</li>
-                                            <li>Choose safe transportation and avoid sharing personal information.</li>
-                                        </ul>
-                                    ) 
-                                    } 
+                                    <h2 className='pb-2 mt-2 font-mono text-4xl text-center uppercase border-b-4 border-white max-w-80'>{navigation == 'Feed' ? 'Incidents Feed' : 'Security Tips'}</h2>
+                                    {navigation == 'Feed' ? Reports.map((Report, index) => {
+                                        return <IncidentReport key={index} local={Report.local} time={Report.time} description={Report.description} type={Report.type} img={Report.img} />
+                                    })
+                                        :
+                                        (
+                                            <ul className='flex flex-col gap-5 py-5 pl-5 text-justify list-decimal max-w-80'>
+                                                <img src={SecTips} alt="Security tips" className='w-full rounded-md h-52 '/>
+                                                <li>
+                                                    <h4 className='text-lg font-bold'>Keep your documents and money in safe places.</h4>
+                                                    <p className='text-sm text-justify max-w-80'>Keep your documents and money in safe places: Ensure the security of your important documents and money by storing them in secure locations such as a hidden wallet, a hotel safe, or a locked bag while traveling to prevent loss or theft.</p>
+                                                </li>
+                                                <li>
+                                                    <h4 className='text-lg font-bold'> 
+                                                    Avoid leaving belongings, in areas with little visibility.
+                                                    </h4>
+                                                    <p className='text-sm text-justify max-w-80'>Avoid leaving belongings in areas with little visibility: Reduce the risk of theft by refraining from leaving your belongings unattended in areas with limited visibility, such as your back or secluded spots, where they may be more susceptible to theft or tampering.</p>
+                                                </li>
+                                                <li>
+                                                    <h4 className='text-lg font-bold'> 
+                                                    Know your local emergency numbers.
+                                                    </h4>
+                                                    <p className='text-sm text-justify max-w-80'>Know your local emergency numbers: Stay prepared for emergencies by familiarizing yourself with the local emergency contact numbers in the area you are visiting. This knowledge can expedite response times in critical situations.</p>
+                                                </li>
+                                                <li>
+                                                    <h4 className='text-lg font-bold'> 
+                                                    Avoid using your cell phone in places with few people around
+                                                    </h4>
+                                                    <p className='text-sm text-justify max-w-80'>Avoid using your cell phone in deserted areas: Minimize the risk of being targeted by criminals by refraining from using your cell phone in deserted or isolated areas where you may be more vulnerable to theft or assault.</p>
+                                                </li>
+                                                <li>
+                                                    <h4 className='text-lg font-bold'> 
+                                                    Be aware of possible scams and theft.
+                                                    </h4>
+                                                    <p className='text-sm text-justify max-w-80'>Be aware of possible scams and theft: Stay vigilant and educate yourself about common scams and theft tactics prevalent in the area you are visiting to avoid falling victim to fraudulent schemes or theft.</p>
+                                                </li>
+                                                <li>
+                                                    <h4 className='text-lg font-bold'> 
+                                                    Avoid attracting attention with valuable objects.
+                                                    </h4>
+                                                    <p className='text-sm text-justify max-w-80'>Avoid attracting attention with valuable objects: Lower the likelihood of being targeted by thieves by refraining from flaunting valuable possessions such as expensive jewelry, gadgets, or cash in public places, thus minimizing the risk of attracting unwanted attention.</p>
+                                                </li>
+                                                <li>
+                                                    <h4 className='text-lg font-bold'> 
+                                                    Choose safe transportation and avoid sharing personal information.
+                                                    </h4>
+                                                    <p className='text-sm text-justify max-w-80'>Choose safe transportation and avoid sharing personal information: Prioritize safety by opting for reputable transportation services and exercising caution when sharing personal information with strangers to safeguard against potential risks such as identity theft or physical harm.</p>
+                                                </li>
+                                            </ul>
+                                        )
+                                    }
                                 </div>
                             </div>
                         )
@@ -75,8 +87,8 @@ const ReportsFeed = () => {
                         (null)
                 }
             </div>
-            <div onClick={() => {isActive ? setIsActive(false) : setIsActive(true) }} className={`cursor-pointer self-center bg-[#1E1E1E] flex items-center transition duration-300 relative h-32 hover:bg-white hover:text-[#1E1E1E]  border-4 border-[#1E1E1E] rounded-r-lg ${isActive ? 'left-14 ' : '-left-2'}`}>
-            {
+            <div onClick={() => { isActive ? setIsActive(false) : setIsActive(true) }} className={`cursor-pointer self-center bg-[#1E1E1E] flex items-center transition duration-300 relative h-32 hover:bg-white hover:text-[#1E1E1E]  border-4 border-[#1E1E1E] rounded-r-lg ${isActive ? 'left-14 ' : '-left-2'}`}>
+                {
                     isActive ?
                         (<IoMdArrowDropleft size={50} />)
                         :

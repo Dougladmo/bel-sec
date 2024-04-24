@@ -1,7 +1,6 @@
 import Map from './components/Map'
-import MobileNav from './components/MobileNav'
-import Navbar from './components/Navbar'
 import ReportPopUp from './components/ReportPopUp'
+import ReportSender from './components/ReportSender'
 import ReportsFeed from './components/ReportsFeed'
 
 function App() {
@@ -13,6 +12,7 @@ function App() {
         <Map />
           <ReportsFeed />
           <ReportPopUp />
+          <ReportSender />
       </div>
     </>
   )

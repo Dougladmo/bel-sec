@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { IoMdMenu, IoMdClose } from "react-icons/io";
+import { TbUrgent } from "react-icons/tb";
 
 const ReportPopUp = () => {
     const [isActive, setIsActive] = useState(false)
@@ -19,7 +20,7 @@ const ReportPopUp = () => {
                 <p className='text-sm'>Police: 91 98115-9181</p>
                 <p className='text-sm'>Fire-fighter: 91 99339-4574</p>
             </div>
-        </div>) : (<IoMdMenu onClick={() => {setIsActive(true)}} size={55} className='bg-[#1E1E1E] p-2 text-white rounded-lg absolute top-2 right-2 cursor-pointer transition duration-300 hover:bg-white hover:text-[#1E1E1E] border-4 border-[#1E1E1E]' />)
+        </div>) : (<TbUrgent onClick={() => {setIsActive(true)}} size={55} className='absolute p-2 text-white transition duration-300 bg-red-500 border-4 border-red-500 rounded-lg cursor-pointer top-2 right-2 hover:bg-white hover:text-red-500' />)
     )
 }
 

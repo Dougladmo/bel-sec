@@ -1,7 +1,6 @@
 import Map from './components/Map'
-import MobileNav from './components/MobileNav'
-import Navbar from './components/Navbar'
 import ReportPopUp from './components/ReportPopUp'
+import ReportSender from './components/ReportSender'
 import ReportsFeed from './components/ReportsFeed'
 
 function App() {
@@ -9,15 +8,15 @@ function App() {
 
   return (
     <>
-      <div className='relative h-screen'>
+      <div className='relative h-screen overflow-hidden'>
         <Map />
-          <Navbar />
           <ReportsFeed />
           <ReportPopUp />
-        <MobileNav />
+          <ReportSender />
       </div>
     </>
   )
 }
 
 export default App
+

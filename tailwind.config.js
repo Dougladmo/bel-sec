@@ -22,10 +22,15 @@ export default {
         'slide': {
           '0%': { transform: 'translate(-400px)'},
           '100%': { transform: 'translate(0px)'},
+        },
+        'slide-back': {
+          '0%': { transform: 'translate(300px)'},
+          '100%': { transform: 'translate(0px)'},
         }
       },
       animation: {
         offCanvas: 'slide 1s',
+        slideBack: 'slide-back 1s'
       }
     },
   },

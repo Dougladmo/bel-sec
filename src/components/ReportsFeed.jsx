@@ -5,6 +5,7 @@ import img from '../assets/images.jpg'
 
 const ReportsFeed = () => {
     const [isActive, setIsActive] = useState(false)
+    const [navigation, setNavigation] = useState('Feed')
     const [Reports, setReports] = useState([
         {
             type: 'acidente',
@@ -40,22 +41,35 @@ const ReportsFeed = () => {
 
     return (
         <div className={`bg-[#1E1E1E] text-white h-screen flex max-w-80 absolute top-0 left-0 md:max-w-xl ${isActive ? 'w-auto animate-offCanvas' : 'w-1'}`}>
-            <div className='py-5 flex flex-col items-center'>
+            <div className='flex flex-col items-center py-5'>
                 {
                     isActive ?
                         (
-                            <div className='pl-5 pr-10 overflow-auto'>
-                                <h2 className='text-4xl text-center border-b-4 border-white pb-2 uppercase font-mono'>Incident Reports</h2>
-                                {Reports.map((Report, index) => {
-                                    return <IncidentReport key={index} time={Report.time} description={Report.description} type={Report.type} img={Report.img} /> 
-                                })}
+                            <div className='flex flex-col items-center w-full pl-5 pr-10 overflow-auto cursor-pointer'>
+                                <ul className='flex mb-2'>
+                                    <li onClick={() => setNavigation('Feed')} className='border-b-2 border-white py-2 transition duration-300 px-5 rounded-l-md hover:bg-white hover:text-[#1E1E1E]'>News Feed</li>
+                                    <li onClick={() => setNavigation('Tips')} className='border-b-2 border-white py-2 transition duration-300 px-5 rounded-r-md hover:bg-white hover:text-[#1E1E1E]'>Security Tips</li>
+                                </ul>
+                                <div>
+                                    <h2 className='pb-2 mt-2 font-mono text-4xl text-center uppercase border-b-4 border-white'>{navigation == 'Feed' ? 'Incidents Feed' : 'Security Tips'}</h2>
+                                    {navigation == 'Feed'? Reports.map((Report, index) => {
+                                        return <IncidentReport key={index} time={Report.time} description={Report.description} type={Report.type} img={Report.img} /> 
+                                    }) 
+                                    :
+                                    (
+                                        <div>
+                                            dicas
+                                        </div>
+                                    ) 
+                                    } 
+                                </div>
                             </div>
                         )
                         :
                         (null)
                 }
             </div>
-            <div onClick={() => {isActive ? setIsActive(false) : setIsActive(true) }} className={`cursor-pointer self-center bg-[#1E1E1E] flex items-center relative h-32 rounded-r-lg ${isActive ? 'left-8' : '-left-2'}`}>
+            <div onClick={() => {isActive ? setIsActive(false) : setIsActive(true) }} className={`cursor-pointer self-center bg-[#1E1E1E] flex items-center transition duration-300 relative h-32 hover:bg-white hover:text-[#1E1E1E]  border-4 border-[#1E1E1E] rounded-r-lg ${isActive ? 'left-14 ' : '-left-2'}`}>
             {
                     isActive ?
                         (<IoMdArrowDropleft size={50} />)

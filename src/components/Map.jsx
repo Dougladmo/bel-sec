@@ -48,7 +48,11 @@ const Map = () => {
                                 text: 'Você está aqui!',
                                 className: 'bg-white p-2 border-2 border-black rounded-md mb-16'
                             }
-                        }} />
+                        }} 
+                      //   icon={{
+                      //     url: img
+                      // }}
+                        />
                         </>
                     </GoogleMap>
                 ) : <></>

@@ -5,10 +5,12 @@ import SafeImg from '../assets/SafeArea.png'
 import MobileNav from './MobileNav';
 import { useState, useEffect } from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import SecurityAlert from './SecurityAlert';
 
 const Map = () => {
   const [showDangerAreas, setShowDangerAreas] = useState(false)
   const [showSafeAreas, setShowSafeAreas] = useState(false)
+  const [showAlert, setShowAlert] = useState(false)
   const [latitude, setLatitude] = useState(-1.458558);
   const [longitude, setLongitude] = useState(-48.486620);
 
@@ -40,7 +42,7 @@ const Map = () => {
 
   const handleRisk = () => showDangerAreas ? setShowDangerAreas(false) : setShowDangerAreas(true)
 
-  const handleAlert = () => console.log('alert')
+  const handleAlert = () => showAlert ? setShowAlert(false) : setShowAlert(true)
 
   const handleSafe = () => showSafeAreas ? setShowSafeAreas(false) : setShowSafeAreas(true)
 
@@ -112,6 +114,7 @@ const Map = () => {
                   }} />
               })}
             </>
+            {showAlert ? <SecurityAlert /> : null }
             <Navbar handleOnClickAlert={handleAlert} handleOnClickSafe={handleSafe} handleOnClickRisk={handleRisk} />
             <MobileNav handleOnClickAlert={handleAlert} handleOnClickSafe={handleSafe} handleOnClickRisk={handleRisk} />
           </GoogleMap>

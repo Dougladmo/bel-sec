@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { IoMdClose } from "react-icons/io";
 import { FiAlertTriangle } from "react-icons/fi";
 import ReportForm from './ReportForm';
+import {Slide} from 'react-awesome-reveal'
 
 const ReportSender = () => {
     const [isActive, setIsActive] = useState(false)
@@ -11,10 +12,12 @@ const ReportSender = () => {
         {
         isActive ? 
         (
-            <div className='bg-[#1E1E1E] absolute top-0 h-screen w-screen flex flex-col'>
-                <IoMdClose onClick={() => setIsActive(false)} size={50} className='self-end mt-5 mr-2 text-right text-white cursor-pointer'/>
-                <ReportForm />
-            </div>
+            <Slide className='absolute top-0'>
+                <div className='bg-[#1E1E1E]  h-screen w-screen flex flex-col'>
+                    <IoMdClose onClick={() => setIsActive(false)} size={50} className='self-end mt-5 mr-2 text-right text-white cursor-pointer'/>
+                    <ReportForm />
+                </div>
+            </Slide>
         )
         :
         (

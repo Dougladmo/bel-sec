@@ -6,6 +6,7 @@ Aplicação desenvolvida com o intuito de ser uma ferramenta para garantir a seg
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -23,11 +24,14 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - CSS
 - Bootstrap
 - Javascript
-- Python
 - React
-- Django
 - Git e Github
 - Figma
+
+## Projeto
+
+Para visualização do projeto, acesse utilizando esse link:
+    https://bel-sec.vercel.app
 
 ## :memo: Licença
 
